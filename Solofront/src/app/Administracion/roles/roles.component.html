@@ -1,1 +1,38 @@
-<p>roles works!</p>
+<div class="container mt-3">
+  <h2>Roles</h2>
+
+  <form (ngSubmit)="agregarRol()" #rolForm="ngForm" class="mb-3">
+    <div class="input-group">
+      <input
+        type="text"
+        class="form-control"
+        name="nombre"
+        [(ngModel)]="nuevoRol.nombre"
+        placeholder="Nombre del rol"
+        required
+      />
+      <button class="btn btn-primary" type="submit" [disabled]="rolForm.invalid">
+        Agregar
+      </button>
+    </div>
+  </form>
+
+  <table class="table table-striped" *ngIf="roles.length > 0">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nombre</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let rol of roles">
+        <td>{{ rol.id }}</td>
+        <td>{{ rol.nombre }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div *ngIf="roles.length === 0">
+    No hay roles registrados.
+  </div>
+</div>
