@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Reporte de Factura</title>
+  <style>
+    table { border-collapse: collapse; width: 100%; }
+    th, td { border: 1px solid #ccc; padding: 4px; text-align: left; }
+    tfoot td { font-weight: bold; }
+  </style>
+</head>
+<body>
+  <h1>Reporte de Factura</h1>
+  <div id="invoice-report"></div>
+  <script src="invoice-report.js"></script>
+  <script>
+    const sampleInvoice = {
+      number: 'FAC-001',
+      customer: 'Cliente de ejemplo',
+      items: [
+        { description: 'Producto A', quantity: 2, price: 10 },
+        { description: 'Producto B', quantity: 1, price: 20 }
+      ],
+      taxRate: 0.18
+    };
+    renderInvoiceReport(sampleInvoice);
+  </script>
+</body>
+</html>

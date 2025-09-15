@@ -60,10 +60,16 @@ For more information on using the Angular CLI, including detailed command refere
 
 ## Invoice report script
 
-This project includes a small Node.js script that generates a sample invoice report in the console. To run it with the example data, execute:
+This project includes a small JavaScript invoice report script that can run in Node.js or directly in the browser.
+
+### Console
+
+To print the sample data in the console:
 
 ```bash
 node src/invoice-report.js
 ```
 
-You can also import the `generateInvoiceReport` function from this file and provide your own invoice data to produce a formatted summary.
+### Browser
+
+Open `src/invoice-report.html` in any web browser to view the same invoice rendered as an HTML table. The script exposes a `renderInvoiceReport` function that you can reuse to display custom invoice data inside your own pages.
