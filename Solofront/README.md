@@ -57,3 +57,13 @@ Angular CLI does not come with an end-to-end testing framework by default. You c
 ## Additional Resources
 
 For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+
+## Invoice report script
+
+This project includes a small Node.js script that generates a sample invoice report in the console. To run it with the example data, execute:
+
+```bash
+node src/invoice-report.js
+```
+
+You can also import the `generateInvoiceReport` function from this file and provide your own invoice data to produce a formatted summary.
